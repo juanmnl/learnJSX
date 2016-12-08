@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import './../styles/App.css';
 
 var titles = [
@@ -80,6 +81,7 @@ class App extends Component {
             {this.state.output}
           </pre>
         </section>
+        <Footer twitterHandle="@_juanmnl" />
       </div>
     );
   }

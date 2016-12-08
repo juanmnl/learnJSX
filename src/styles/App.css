@@ -81,7 +81,6 @@
 
 pre {
   background-color: #e8e8e8;
-  border-radius: 0 0 4px 0;
   flex-grow: 1;
   white-space: pre-wrap;
   overflow-y: scroll;
@@ -99,7 +98,6 @@ pre, textarea {
 textarea {
   color: white;
   background-color: #2f2f2f;
-  border-radius: 0 0 0 4px;
   border: 0;
   resize: none;
   flex-grow: 1;
@@ -107,6 +105,25 @@ textarea {
 
 textarea:focus {
   outline: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #111;
+  padding: 5px;
+  font-size: .7rem;
+  background-color: #222;
+}
+
+footer a {
+  color: #000;
+  align-self: center;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FF7349;
 }
 
 @keyframes blink {
