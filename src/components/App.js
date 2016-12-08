@@ -3,9 +3,9 @@ import Navbar from './Navbar';
 import './../styles/App.css';
 
 var titles = [
-  {title: 'Traductor de Babel', placeholder: '/* Insertar código ES6 aquí */' },
-  {title: 'Tradutor do Babel', placeholder: '/* Insira código ES6 aqui */'},
-  {title: 'Babel Translator', placeholder: '/* Insert ES6 code here */'}
+  {title: 'Traductor de Babel', placeholder: '/* Insertar código ES6 aquí */', clear: 'Borrar' },
+  {title: 'Tradutor do Babel', placeholder: '/* Insira código ES6 aqui */', clear: 'Apagar'},
+  {title: 'Babel Translator', placeholder: '/* Insert ES6 code here */', clear: 'Clear'}
 ];
 
 class App extends Component {
@@ -63,6 +63,7 @@ class App extends Component {
           title={title.title}
           onChangeTitle={this._changeTitle.bind(this)}
           onClear={this._onClear.bind(this)}
+          buttonLang={title.clear}
         />
         {this.state.err
           ? <div className='error'>{this.state.err}</div>

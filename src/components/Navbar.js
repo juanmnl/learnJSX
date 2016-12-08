@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <div className='navbar-container'>
         <button onClick={this.props.onClear}>
-          Clear
+          {this.props.buttonLang}
         </button>
         <h1 onClick={this.props.onChangeTitle}>
           {this.props.title}
