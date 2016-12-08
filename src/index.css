@@ -1,6 +1,8 @@
 /*GLOBAL CSS*/
 body {
+  height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 40px 10%;
   font-family: monospace;
+  background: linear-gradient(120deg, #B13254, #471437);
 }

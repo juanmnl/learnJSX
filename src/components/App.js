@@ -9,7 +9,7 @@ class App extends Component {
       input: '',
       output: '',
       err: '',
-      placeholder: '/* escribe código JSX aquí */',
+      placeholder: '/* Escribe código JSX aquí */',
     }
   }
 
@@ -30,10 +30,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Navbar title='Aprende JSX' />
-        <header>{this.state.err}</header>
-        <section className="container">
+      <div className='app-container'>
+        <Navbar title='Traductor de JSX' />
+        {this.state.err
+          ? <div className='error'>{this.state.err}</div>
+          : ''
+        }
+        <section className="section-container">
           <textarea
             onChange={this.update.bind(this)}
             defaultValue={this.state.input}
