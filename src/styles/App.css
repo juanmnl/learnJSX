@@ -1,1 +1,30 @@
+header {
+  display: block;
+  height: 5vh;
+  overflow: auto;
+  background-color: pink;
+  color: red;
+  font-size: 16px;
+}
 
+.container {
+  height: 95vh;
+  display: flex;
+}
+
+pre {
+  background-color: #f8f8f8;
+}
+
+pre, textarea {
+  width: 50%;
+  font-family: monospace;
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  color: #222222;
+}
+
+textarea:focus {
+  outline: 0;
+}

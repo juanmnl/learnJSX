@@ -5,9 +5,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: '/* add JSX here */',
+      input: '',
       output: '',
       err: '',
+      placeholder: '/* escribe código JSX aquí */',
     }
   }
 
@@ -34,6 +35,7 @@ class App extends Component {
           <textarea
             onChange={this.update.bind(this)}
             defaultValue={this.state.input}
+            placeholder={this.state.placeholder}
           />
           <pre>
             {this.state.output}
