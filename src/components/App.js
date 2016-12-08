@@ -2,18 +2,24 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import './../styles/App.css';
 
+var titles = [
+  {title: 'Traductor de Babel', placeholder: '/* Insertar código ES6 aquí */' },
+  {title: 'Tradutor do Babel', placeholder: '/* Insira código ES6 aqui */'},
+  {title: 'Babel Translator', placeholder: '/* Insert ES6 code here */'}
+];
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      titleIndex: 0,
       input: '',
       output: '',
       err: '',
-      placeholder: '/* Insertar código aquí */',
     }
   }
 
-  update(e) {
+  _update(e) {
     let code = e.target.value;
     try {
       this.setState({
@@ -28,19 +34,38 @@ class App extends Component {
     }
   }
 
+  _changeTitle() {
+    let newIndex;
+
+    if (this.state.titleIndex + 1 === titles.length) {
+      newIndex = 0;
+    } else {
+      newIndex = this.state.titleIndex + 1;
+    }
+
+    this.setState({
+      titleIndex: newIndex,
+    });
+  }
+
   render() {
+    let title = titles[this.state.titleIndex];
     return (
       <div className='app-container'>
-        <Navbar title='Traductor de Babel' />
+        <Navbar
+          titleID={this.state.titleIndex}
+          title={title.title}
+          onClick={this._changeTitle.bind(this)}
+        />
         {this.state.err
           ? <div className='error'>{this.state.err}</div>
           : ''
         }
         <section className="section-container">
           <textarea
-            onChange={this.update.bind(this)}
+            onChange={this._update.bind(this)}
             defaultValue={this.state.input}
-            placeholder={this.state.placeholder}
+            placeholder={title.placeholder}
           />
           <pre>
             {this.state.output}

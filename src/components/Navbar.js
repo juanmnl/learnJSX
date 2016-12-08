@@ -4,7 +4,9 @@ class Navbar extends Component {
   render() {
     return (
       <div className='navbar'>
-        <h1>{this.props.title}</h1>
+        <h1 onClick={this.props.onClick}>
+          {this.props.title}
+        </h1>
       </div>
     );
   }
