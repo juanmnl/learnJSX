@@ -36,15 +36,21 @@ class App extends Component {
 
   _changeTitle() {
     let newIndex;
-
     if (this.state.titleIndex + 1 === titles.length) {
       newIndex = 0;
     } else {
       newIndex = this.state.titleIndex + 1;
     }
-
     this.setState({
       titleIndex: newIndex,
+    });
+  }
+
+  _onClear(e) {
+    document.getElementById('input').value = '';
+    this.setState({
+      output: '',
+      err: '',
     });
   }
 
@@ -55,7 +61,8 @@ class App extends Component {
         <Navbar
           titleID={this.state.titleIndex}
           title={title.title}
-          onClick={this._changeTitle.bind(this)}
+          onChangeTitle={this._changeTitle.bind(this)}
+          onClear={this._onClear.bind(this)}
         />
         {this.state.err
           ? <div className='error'>{this.state.err}</div>
@@ -63,6 +70,7 @@ class App extends Component {
         }
         <section className="section-container">
           <textarea
+            id='input'
             onChange={this._update.bind(this)}
             defaultValue={this.state.input}
             placeholder={title.placeholder}

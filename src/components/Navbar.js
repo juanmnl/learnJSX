@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import ghLogo from './../../gh-logo.png';
 
 class Navbar extends Component {
   render() {
     return (
-      <div className='navbar'>
-        <h1 onClick={this.props.onClick}>
+      <div className='navbar-container'>
+        <button onClick={this.props.onClear}>
+          Clear
+        </button>
+        <h1 onClick={this.props.onChangeTitle}>
           {this.props.title}
         </h1>
+        <a href="https://github.com/juanmnl/learnJSX"><img src={ghLogo} alt="Github Logo" /></a>
       </div>
     );
   }

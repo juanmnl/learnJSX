@@ -8,23 +8,58 @@
   height: 90vh;
 }
 
-.navbar {
+.navbar-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
   color: #222;
   background-color: #FF5449;
   background: linear-gradient(40deg, #FF7349, #FF5449);
-  justify-content: center;
   flex-shrink: 0;
   text-transform: uppercase;
   border-bottom: 1px solid #222;
   border-radius: 4px 4px 0 0;
 }
 
-.navbar h1 {
-  display: inline-block;
+.navbar-container h1 {
   font-size: 1.2rem;
   background-color: #ffcc49;
   padding: 0 2px;
+}
+
+.navbar-container button {
+  background-color: transparent;
+  border: 2px solid #ffcc49;
+  border-radius: 4px;
+  color: #ffcc49;
+  outline: 0;
+  transition: all .4s ease;
+}
+
+.navbar-container button:hover {
+  background-color: #ffcc49;
+  color: #222;
+}
+
+.navbar-container button:active {
+  background-color: #FF7349;
+  color: #ffcc49;
+}
+
+.navbar-container a {
+  text-decoration: none;
+  color: #ffcc49;
+  font-size: .8rem;
+}
+
+.navbar-container a > img {
+  width: 22px;
+  transition: all .4s ease;
+}
+
+.navbar-container a:hover > img {
+  filter: invert(100%);
 }
 
 .error {
