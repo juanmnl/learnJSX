@@ -22,7 +22,7 @@
 
 .navbar h1 {
   display: inline-block;
-  font-size: 1.4em;
+  font-size: 1.2rem;
   background-color: #ffcc49;
   padding: 0 2px;
 }
@@ -32,7 +32,7 @@
   overflow: auto;
   background-color: #ffdce9;
   color: red;
-  font-size: 16px;
+  font-size: .9rem;
   padding: 10px;
   box-shadow: inset 0px 0px 4px 1px rgba(255, 132, 132, 0.3);
   border-bottom: 1px solid #222;
@@ -55,7 +55,7 @@ pre {
 pre, textarea {
   width: 50%;
   font-family: monospace;
-  font-size: 16px;
+  font-size: .9rem;
   margin: 0;
   padding: 10px;
   color: #222222;
@@ -72,4 +72,13 @@ textarea {
 
 textarea:focus {
   outline: 0;
+}
+
+@keyframes blink {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }

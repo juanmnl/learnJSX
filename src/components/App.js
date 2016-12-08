@@ -9,7 +9,7 @@ class App extends Component {
       input: '',
       output: '',
       err: '',
-      placeholder: '/* Escribe código JSX aquí */',
+      placeholder: '/* Insertar código aquí */',
     }
   }
 
@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className='app-container'>
-        <Navbar title='Traductor de JSX' />
+        <Navbar title='Traductor de Babel' />
         {this.state.err
           ? <div className='error'>{this.state.err}</div>
           : ''
