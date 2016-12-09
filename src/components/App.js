@@ -4,9 +4,9 @@ import Footer from './Footer';
 import './../styles/App.css';
 
 var titles = [
-  {title: 'Traductor de Babel', placeholder: '/* Insertar código ES6 aquí */', clear: 'Borrar' },
-  {title: 'Tradutor do Babel', placeholder: '/* Insira código ES6 aqui */', clear: 'Apagar'},
-  {title: 'Babel Translator', placeholder: '/* Insert ES6 code here */', clear: 'Clear'}
+  {title: 'Traductor de Babel.js', placeholder: '/* Insertar código ES6/JSX aquí */', clear: 'Borrar' },
+  {title: 'Tradutor do Babel.js', placeholder: '/* Insira código ES6/JSX aqui */', clear: 'Apagar'},
+  {title: 'Babel.js Translator', placeholder: '/* Insert ES6/JSX code here */', clear: 'Clear'}
 ];
 
 class App extends Component {
